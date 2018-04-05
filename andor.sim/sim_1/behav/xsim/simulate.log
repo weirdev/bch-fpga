@@ -1,0 +1,19 @@
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+AND of X and Y is 0101010101010100
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+SUMING together the AND bits will give us 00000111

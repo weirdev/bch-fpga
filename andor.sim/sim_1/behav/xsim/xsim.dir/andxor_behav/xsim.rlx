@@ -1,0 +1,12 @@
+
+{ 
+    crc :  7715295831383560729  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxor_behav xil_defaultlib.andxor xil_defaultlib.glbl" , 
+    buildDate : "Oct  4 2017" , 
+    buildTime : "20:11:37" , 
+    linkCmd : "C:\\Xilinx\\Vivado\\2017.3\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/andxor_behav/xsimk.exe\"   \"xsim.dir/andxor_behav/obj/xsim_0.win64.obj\" \"xsim.dir/andxor_behav/obj/xsim_1.win64.obj\" \"C:\\Xilinx\\Vivado\\2017.3\\lib\\win64.o\\\\librdi_simulator_kernel.dll\" \"C:\\Xilinx\\Vivado\\2017.3\\lib\\win64.o\\\\librdi_simbridge_kernel.dll\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
