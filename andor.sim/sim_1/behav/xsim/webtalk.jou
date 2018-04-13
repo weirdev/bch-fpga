@@ -2,8 +2,8 @@
 # Webtalk v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Thu Apr  5 19:07:16 2018
-# Process ID: 3308
+# Start of session at: Fri Apr 13 13:03:15 2018
+# Process ID: 14004
 # Current directory: H:/Documents/andor/andor.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source H:/Documents/andor/andor.sim/sim_1/behav/xsim/xsim.dir/andxor_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: H:/Documents/andor/andor.sim/sim_1/behav/xsim/webtalk.log
