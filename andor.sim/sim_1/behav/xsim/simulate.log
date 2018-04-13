@@ -17,3 +17,4 @@ AND of X and Y is 0101010101010100
  AND of each bit in X and Y is 0
  AND of each bit in X and Y is 1
 SUMING together the AND bits will give us 00000111
+XORING each sumbit will produce a single bit output of... 0
