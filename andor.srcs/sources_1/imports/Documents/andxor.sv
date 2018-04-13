@@ -2,7 +2,6 @@
 
 module andxor ();
     
-    
     reg[15:0] X = 16'b0101010101010100;
     reg[15:0] Y = 16'b1111111111111111;
     reg[7:0] SUMBIT = 16'b0000000000000000;
@@ -17,10 +16,10 @@ module andxor ();
     
     initial
         begin
-         #10;
          //Scalar Tests 
          $display("AND of X and Y is %b", AND);
-         
+        
+        
          for(i=0;i<16;i = i+1)begin
              $display(" AND of each bit in X and Y is %b", AND[i] );
              SUMBIT = SUMBIT + AND[i];
@@ -34,15 +33,10 @@ module andxor ();
          
          
          
-         
+         #100 $finish ;
         
-         
-             
-         
-         
-         
-        
+          
         end
-     endmodule
+  endmodule
     
     

@@ -1,0 +1,22 @@
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+AND of X and Y is 0101010101010100
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+ AND of each bit in X and Y is 1
+ AND of each bit in X and Y is 0
+SUMING together the AND bits will give us 00000111
+XORING each sumbit will produce a  output of... 00000100
+$finish called at time : 100 ns : File "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" Line 36
