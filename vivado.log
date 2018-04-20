@@ -2,10 +2,10 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Fri Apr 13 13:31:08 2018
-# Process ID: 10672
+# Start of session at: Fri Apr 20 00:58:18 2018
+# Process ID: 9124
 # Current directory: H:/Documents/andor
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8336 H:\Documents\andor\andor.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5808 H:\Documents\andor\andor.xpr
 # Log file: H:/Documents/andor/vivado.log
 # Journal file: H:/Documents/andor\vivado.jou
 #-----------------------------------------------------------
@@ -21,20 +21,22 @@ update_compile_order -fileset sources_1
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'andxor' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L xil_defaultlib -prj andxor_vlog.prj"
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxor_behav xil_defaultlib.andxor xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -42,17 +44,74 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot andxor_behav
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Error: Failed   289 &  4369 | 0 !=     X
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial29_0  File: H:/Documents/andxorBENCH.sv
+SUMBIT IS 00000001xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 776.957 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "andxor_behav -key {Behavioral:sim_1:Functional:andxor} -tclbatch {andxor.tcl} -log {simulate.log}"
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2017.3
 Time resolution is 1 ps
-source andxor.tcl
+source andxorBENCH.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -63,47 +122,33 @@ source andxor.tcl
 #   }
 # }
 # run 1000ns
-AND of X and Y is 0101010101010100
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
-SUMING together the AND bits will give us 00000111
-XORING each sumbit will produce a  output of... 00000100
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxor_behav' loaded.
+Error: Failed  4401 &  4369 | 0 !=     X
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial29_0  File: H:/Documents/andxorBENCH.sv
+SUMBIT IS 00010001xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 853.762 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 791.629 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'andxor' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L xil_defaultlib -prj andxor_vlog.prj"
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module andxor
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxor_behav xil_defaultlib.andxor xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -111,17 +156,834 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot andxor_behav
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Error: Failed  4401 &  4369 | 0 !=     x
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial29_0  File: H:/Documents/andxorBENCH.sv
+SUMBIT IS xxxxxxxxxxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 815.250 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Error: Failed  4401 &  4369 |   532 !=     x
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial29_0  File: H:/Documents/andxorBENCH.sv
+SUMBIT IS xxxxxxxxxxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 815.250 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 16 for port X [H:/Documents/andxorBENCH.sv:24]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 16 for port Y [H:/Documents/andxorBENCH.sv:25]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 8 for port SUMBIT [H:/Documents/andxorBENCH.sv:26]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Error: Failed 1 & 1 | 0 !=     X
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial29_0  File: H:/Documents/andxorBENCH.sv
+SUMBIT IS zzzzzzzzxxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 815.250 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 8 for port SUMBIT [H:/Documents/andxorBENCH.sv:26]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Error: Failed  4401 &  4369 |   0 !=     X
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial29_0  File: H:/Documents/andxorBENCH.sv
+SUMBIT IS zzzzzzzzxxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 817.430 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Error: Failed  4401 &  4369 |   0 !=   x
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial29_0  File: H:/Documents/andxorBENCH.sv
+SUMBIT IS xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 817.430 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 8 for port SUMBIT [H:/Documents/andxorBENCH.sv:26]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Error: Failed  4401 &  4369 |   0 !=     Z
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial29_0  File: H:/Documents/andxorBENCH.sv
+SUMBIT IS zzzzzzzz00010001
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 817.430 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+SUMBIT IS 0001000100010001
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 826.434 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+SUMBIT IS xxxxxxxxxxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 826.434 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+SUMBIT IS 0001000100010001
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 826.434 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [VRFC 10-2458] undeclared symbol ORING, assumed default net type wire [H:/Documents/andxorBENCH.sv:27]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 16 for port ORING [H:/Documents/andxorBENCH.sv:27]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+SUMBIT IS 0001000100010001
+XORING this subit x
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 826.434 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+SUMBIT IS 0001000100010001
+XORING this subit xxxxxxxxxxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 826.434 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+ERROR: [XSIM 43-3185] "H:/Documents/andxorBENCH.sv" Line 42. Number of arguments are less than format specifiers. 
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'H:/Documents/andor/andor.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'H:/Documents/andor/andor.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+SUMBIT IS 0001000100010001
+Error: Failed
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial32_0  File: H:/Documents/andxorBENCH.sv
+XORING this subit xxxxxxxxxxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 826.434 ; gain = 0.000
+add_bp {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} 30
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Stopped at time : 0 fs : File "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" Line 30
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 826.434 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Stopped at time : 0 fs : File "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" Line 30
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 826.434 ; gain = 0.000
+remove_bps -file {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} -line 30
+add_bp {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} 30
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "andxor_behav -key {Behavioral:sim_1:Functional:andxor} -tclbatch {andxor.tcl} -log {simulate.log}"
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2017.3
 Time resolution is 1 ps
-source andxor.tcl
+source andxorBENCH.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -132,109 +994,51 @@ source andxor.tcl
 #   }
 # }
 # run 1000ns
-AND of X and Y is 0101010101010100
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
-SUMING together the AND bits will give us 00000111
-XORING each sumbit will produce a  output of... 00000100
-$finish called at time : 50 ns : File "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" Line 38
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxor_behav' loaded.
+Stopped at time : 0 fs : File "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" Line 30
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 835.516 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'andxor' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L xil_defaultlib -prj andxor_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
-Vivado Simulator 2017.3
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxor_behav xil_defaultlib.andxor xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "andxor_behav -key {Behavioral:sim_1:Functional:andxor} -tclbatch {andxor.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2017.3
-Time resolution is 1 ps
-source andxor.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-AND of X and Y is 0101010101010100
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
-SUMING together the AND bits will give us 00000111
-XORING each sumbit will produce a  output of... 00000100
-$finish called at time : 50 ns : File "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" Line 38
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxor_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'andxor' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L xil_defaultlib -prj andxor_vlog.prj"
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module andxor
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+ERROR: [VRFC 10-1247] port connections cannot be mixed ordered and named [H:/Documents/andxorBENCH.sv:23]
+ERROR: [VRFC 10-1040] module andxorBENCH ignored due to previous errors [H:/Documents/andxorBENCH.sv:3]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'H:/Documents/andor/andor.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'H:/Documents/andor/andor.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxor_behav xil_defaultlib.andxor xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -242,17 +1046,19 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot andxor_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "andxor_behav -key {Behavioral:sim_1:Functional:andxor} -tclbatch {andxor.tcl} -log {simulate.log}"
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2017.3
 Time resolution is 1 ps
-source andxor.tcl
+WARNING: [Simulator 45-24] Previous breakpoint at line 30 in file 'H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv' not restored because it is no longer a breakable line.
+source andxorBENCH.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -263,64 +1069,51 @@ source andxor.tcl
 #   }
 # }
 # run 1000ns
-AND of X and Y is 0101010101010100
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
-SUMING together the AND bits will give us 00000111
-XORING each sumbit will produce a  output of... 00000100
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxor_behav' loaded.
+SUMBIT IS 0001000100010001
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 835.516 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'andxor' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L xil_defaultlib -prj andxor_vlog.prj"
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module andxor
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxor_behav xil_defaultlib.andxor xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 8 for port SUMBIT [H:/Documents/andxorBENCH.sv:27]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot andxor_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "andxor_behav -key {Behavioral:sim_1:Functional:andxor} -tclbatch {andxor.tcl} -log {simulate.log}"
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2017.3
 Time resolution is 1 ps
-source andxor.tcl
+source andxorBENCH.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -331,67 +1124,52 @@ source andxor.tcl
 #   }
 # }
 # run 1000ns
-AND of X and Y is 0101010101010100
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
-SUMING together the AND bits will give us 00000111
-XORING each sumbit will produce a  output of... 00000100
-$finish called at time : 100 ns : File "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" Line 38
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxor_behav' loaded.
+SUMBIT IS zzzzzzzz00010001
+Oring is 00010001
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-add_bp {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} 38
-remove_bps -file {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} -line 38
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 838.598 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'andxor' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L xil_defaultlib -prj andxor_vlog.prj"
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxor_behav xil_defaultlib.andxor xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 8 for port SUMBIT [H:/Documents/andxorBENCH.sv:27]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot andxor_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "andxor_behav -key {Behavioral:sim_1:Functional:andxor} -tclbatch {andxor.tcl} -log {simulate.log}"
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2017.3
 Time resolution is 1 ps
-source andxor.tcl
+source andxorBENCH.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -402,29 +1180,70 @@ source andxor.tcl
 #   }
 # }
 # run 1000ns
-AND of X and Y is 0101010101010100
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
- AND of each bit in X and Y is 1
- AND of each bit in X and Y is 0
-SUMING together the AND bits will give us 00000111
-XORING each sumbit will produce a  output of... 00000100
-$finish called at time : 100 ns : File "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" Line 36
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxor_behav' loaded.
+SUMBIT IS zzzzzzzz00010001
+Oring is 00010011
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 838.598 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-exit
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 13 14:22:55 2018...
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'andxorBENCH' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj andxorBENCH_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "H:/Documents/andxorBENCH.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andxorBENCH
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 8 for port SUMBIT [H:/Documents/andxorBENCH.sv:27]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot andxorBENCH_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/Documents/andor/andor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "andxorBENCH_behav -key {Behavioral:sim_1:Functional:andxorBENCH} -tclbatch {andxorBENCH.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source andxorBENCH.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Error: Failed  4401 &  4369 |   5 !=     Z
+Time: 1 ns  Iteration: 0  Process: /andxorBENCH/Initial32_0  File: H:/Documents/andxorBENCH.sv
+SUMBIT IS zzzzzzzz00010001
+Oring is 00010011
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'andxorBENCH_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 838.598 ; gain = 0.000
+import_files
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sources_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'

@@ -1,12 +1,14 @@
 Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxor_behav xil_defaultlib.andxor xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 8 for port SUMBIT [H:/Documents/andxorBENCH.sv:27]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.andxor
+Compiling module xil_defaultlib.andxorBENCH
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot andxor_behav
+Built simulation snapshot andxorBENCH_behav

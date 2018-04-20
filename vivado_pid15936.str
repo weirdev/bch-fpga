@@ -1,0 +1,485 @@
+/*
+
+Xilinx Vivado v2017.3 (64-bit) [Major: 2017, Minor: 3]
+SW Build: 2018833 on Wed Oct  4 19:58:22 MDT 2017
+IP Build: 2016188 on Wed Oct  4 21:52:56 MDT 2017
+
+Process ID: 15936
+License: Customer
+
+Current time: 	Thu Apr 19 19:35:58 CDT 2018
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 731 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.3/tps/win64/jre/bin/java.exe
+
+User name: 	dforsythe
+User home directory: C:/Users/dforsythe
+User working directory: H:/Documents/andor
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.3
+RDI_DATADIR: C:/Xilinx/Vivado/2017.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.3/bin
+
+User preferences location: C:/Users/dforsythe/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/dforsythe/AppData/Roaming/Xilinx/Vivado/2017.3/vivado.xml
+Vivado layouts directory: C:/Users/dforsythe/AppData/Roaming/Xilinx/Vivado/2017.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.3/lib/classes/planAhead.jar
+Vivado log file location: 	H:/Documents/andor/vivado.log
+Vivado journal file location: 	H:/Documents/andor/vivado.jou
+Engine tmp dir: 	H:/Documents/andor/.Xil/Vivado-15936-CS-S113
+
+GUI allocated memory:	184 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 663 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: H:\Documents\andor\andor.xpr. Version: Vivado v2017.3 
+// bs (cl):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// Tcl Message: open_project H:/Documents/andor/andor.xpr 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 57 MB (+57180kb) [00:00:05]
+// [Engine Memory]: 500 MB (+372697kb) [00:00:05]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 67 MB (+7991kb) [00:00:06]
+// [Engine Memory]: 586 MB (+63913kb) [00:00:06]
+// [GUI Memory]: 83 MB (+13131kb) [00:00:06]
+// [GUI Memory]: 91 MB (+3940kb) [00:00:06]
+// [Engine Memory]: 635 MB (+20433kb) [00:00:06]
+// [GUI Memory]: 102 MB (+6613kb) [00:00:07]
+// [GUI Memory]: 109 MB (+1373kb) [00:00:07]
+// Tcl Message: open_project H:/Documents/andor/andor.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'. 
+// Project name: andor; location: H:/Documents/andor; part: xc7z010clg400-1
+// [GUI Memory]: 124 MB (+10353kb) [00:00:07]
+// [Engine Memory]: 674 MB (+8211kb) [00:00:07]
+dismissDialog("Open Project"); // bs (cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 681 MB. GUI used memory: 40 MB. Current time: 4/19/18 7:36:00 PM CDT
+// TclEventType: DG_GRAPH_GENERATED
+// a (cl): Critical Messages: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, andxor (andxor.sv)]", 1, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, andxor (andxor.sv)]", 1, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, andxor (andxor.sv)]", 1, false, false, false, false, false, true); // B (D, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3, true, false, false, false, true, false); // B (D, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ac (ai, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (h, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("H:/Documents/LDE_test-1.sv");
+selectButton("FINISH", "Finish"); // JButton (h, c)
+// 'h' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 -norecurse H:/Documents/LDE_test-1.sv 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4, true); // B (D, cl) - Node
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4); // B (D, cl)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, LDE_test (LDE_test-1.sv)]", 5, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, LDE_test (LDE_test-1.sv)]", 5, true, false, false, false, false, true); // B (D, cl) - Double Click - Node
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 32 seconds
+selectCodeEditor("LDE_test-1.sv", 72, 39); // cd (w, cl)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, andxor (andxor.sv)]", 1, false); // B (D, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 149, 251); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 133, 159); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 128, 62); // cd (w, cl)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+// [Engine Memory]: 709 MB (+872kb) [00:03:13]
+// HMemoryUtils.trashcanNow. Engine heap size: 709 MB. GUI used memory: 45 MB. Current time: 4/19/18 7:39:05 PM CDT
+// Elapsed time: 219 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectCodeEditor("andxor.sv", 48, 81); // cd (w, cl)
+selectCodeEditor("andxor.sv", 50, 89); // cd (w, cl)
+selectCodeEditor("andxor.sv", 67, 79); // cd (w, cl)
+selectCodeEditor("andxor.sv", 63, 85); // cd (w, cl)
+selectCodeEditor("andxor.sv", 61, 80); // cd (w, cl)
+selectCodeEditor("andxor.sv", 53, 110); // cd (w, cl)
+selectCodeEditor("andxor.sv", 47, 112); // cd (w, cl)
+selectCodeEditor("andxor.sv", 47, 125); // cd (w, cl)
+selectCodeEditor("andxor.sv", 62, 110); // cd (w, cl)
+selectCodeEditor("andxor.sv", 48, 148); // cd (w, cl)
+selectCodeEditor("andxor.sv", 108, 46); // cd (w, cl)
+selectCodeEditor("andxor.sv", 245, 157); // cd (w, cl)
+selectCodeEditor("andxor.sv", 234, 145); // cd (w, cl)
+selectCodeEditor("andxor.sv", 192, 132); // cd (w, cl)
+selectCodeEditor("andxor.sv", 113, 42); // cd (w, cl)
+selectCodeEditor("andxor.sv", 304, 82); // cd (w, cl)
+selectCodeEditor("andxor.sv", 304, 88); // cd (w, cl)
+selectCodeEditor("andxor.sv", 338, 107); // cd (w, cl)
+selectCodeEditor("andxor.sv", 219, 122); // cd (w, cl)
+selectCodeEditor("andxor.sv", 230, 143); // cd (w, cl)
+selectCodeEditor("andxor.sv", 71, 113); // cd (w, cl)
+// Elapsed time: 41 seconds
+selectCodeEditor("andxor.sv", 227, 72); // cd (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("andxor.sv", 141, 83); // cd (w, cl)
+selectCodeEditor("andxor.sv", 285, 73); // cd (w, cl)
+selectCodeEditor("andxor.sv", 287, 91); // cd (w, cl)
+selectCodeEditor("andxor.sv", 321, 108); // cd (w, cl)
+selectCodeEditor("andxor.sv", 149, 80); // cd (w, cl)
+selectCodeEditor("andxor.sv", 160, 128); // cd (w, cl)
+selectCodeEditor("andxor.sv", 214, 145); // cd (w, cl)
+// Elapsed time: 40 seconds
+selectCodeEditor("andxor.sv", 113, 158); // cd (w, cl)
+selectCodeEditor("andxor.sv", 109, 185); // cd (w, cl)
+selectCodeEditor("andxor.sv", 120, 211); // cd (w, cl)
+// Elapsed time: 29 seconds
+selectCodeEditor("andxor.sv", 179, 360); // cd (w, cl)
+selectCodeEditor("andxor.sv", 163, 473); // cd (w, cl)
+// Elapsed time: 180 seconds
+selectCodeEditor("andxor.sv", 91, 273); // cd (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("andxor.sv", 41, 285); // cd (w, cl)
+selectCodeEditor("andxor.sv", 47, 275, false, false, false, true, false); // cd (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("andxor.sv", 147, 384); // cd (w, cl)
+selectCodeEditor("andxor.sv", 170, 157); // cd (w, cl)
+selectCodeEditor("andxor.sv", 158, 142); // cd (w, cl)
+// Elapsed time: 13 seconds
+selectCodeEditor("andxor.sv", 130, 150); // cd (w, cl)
+selectCodeEditor("andxor.sv", 109, 163); // cd (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("andxor.sv", 169, 108); // cd (w, cl)
+selectCodeEditor("andxor.sv", 52, 138); // cd (w, cl)
+selectCodeEditor("andxor.sv", 28, 119); // cd (w, cl)
+selectCodeEditor("andxor.sv", 36, 123); // cd (w, cl)
+selectCodeEditor("andxor.sv", 203, 122); // cd (w, cl)
+typeControlKey((HResource) null, "andxor.sv", 'v'); // cd (w, cl)
+selectCodeEditor("andxor.sv", 184, 164); // cd (w, cl)
+selectCodeEditor("andxor.sv", 263, 202); // cd (w, cl)
+typeControlKey((HResource) null, "andxor.sv", 'v'); // cd (w, cl)
+selectCodeEditor("andxor.sv", 59, 209); // cd (w, cl)
+// Elapsed time: 24 seconds
+selectCodeEditor("andxor.sv", 137, 199); // cd (w, cl)
+selectCodeEditor("andxor.sv", 179, 227); // cd (w, cl)
+typeControlKey((HResource) null, "andxor.sv", 'v'); // cd (w, cl)
+selectCodeEditor("andxor.sv", 59, 266); // cd (w, cl)
+selectCodeEditor("andxor.sv", 29, 238); // cd (w, cl)
+selectCodeEditor("andxor.sv", 230, 331); // cd (w, cl)
+selectCodeEditor("andxor.sv", 125, 396); // cd (w, cl)
+selectCodeEditor("andxor.sv", 114, 367); // cd (w, cl)
+selectCodeEditor("andxor.sv", 129, 412); // cd (w, cl)
+// Elapsed time: 20 seconds
+selectCodeEditor("andxor.sv", 191, 280); // cd (w, cl)
+selectCodeEditor("andxor.sv", 219, 290); // cd (w, cl)
+selectCodeEditor("andxor.sv", 46, 328); // cd (w, cl)
+selectCodeEditor("andxor.sv", 134, 336); // cd (w, cl)
+selectCodeEditor("andxor.sv", 278, 360); // cd (w, cl)
+selectCodeEditor("andxor.sv", 59, 384); // cd (w, cl)
+selectCodeEditor("andxor.sv", 68, 216); // cd (w, cl)
+selectCodeEditor("andxor.sv", 48, 179); // cd (w, cl)
+selectCodeEditor("andxor.sv", 133, 233); // cd (w, cl)
+selectCodeEditor("andxor.sv", 138, 232); // cd (w, cl)
+selectCodeEditor("andxor.sv", 190, 369); // cd (w, cl)
+selectCodeEditor("andxor.sv", 157, 369); // cd (w, cl)
+selectCodeEditor("andxor.sv", 157, 369); // cd (w, cl)
+selectCodeEditor("andxor.sv", 161, 368); // cd (w, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("andxor.sv", 200, 374); // cd (w, cl)
+selectCodeEditor("andxor.sv", 191, 374); // cd (w, cl)
+selectCodeEditor("andxor.sv", 122, 328); // cd (w, cl)
+selectCodeEditor("andxor.sv", 222, 366); // cd (w, cl)
+selectCodeEditor("andxor.sv", 198, 370); // cd (w, cl)
+selectCodeEditor("andxor.sv", 246, 355); // cd (w, cl)
+selectCodeEditor("andxor.sv", 93, 166); // cd (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("andxor.sv", 259, 365); // cd (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("andxor.sv", 97, 381); // cd (w, cl)
+selectCodeEditor("andxor.sv", 247, 367); // cd (w, cl)
+selectCodeEditor("andxor.sv", 118, 382, false, false, false, true, false); // cd (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("andxor.sv", 246, 380); // cd (w, cl)
+selectCodeEditor("andxor.sv", 168, 398, false, false, false, true, false); // cd (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+// Elapsed time: 15 seconds
+selectCodeEditor("andxor.sv", 175, 420); // cd (w, cl)
+selectCodeEditor("andxor.sv", 156, 422, false, false, false, true, false); // cd (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+// Elapsed time: 14 seconds
+selectCodeEditor("andxor.sv", 80, 78); // cd (w, cl)
+selectCodeEditor("andxor.sv", 84, 79); // cd (w, cl)
+selectCodeEditor("andxor.sv", 99, 87); // cd (w, cl)
+selectCodeEditor("andxor.sv", 99, 77); // cd (w, cl)
+selectCodeEditor("andxor.sv", 87, 345); // cd (w, cl)
+selectCodeEditor("andxor.sv", 68, 444); // cd (w, cl)
+selectCodeEditor("andxor.sv", 70, 269); // cd (w, cl)
+selectCodeEditor("andxor.sv", 77, 295); // cd (w, cl)
+typeControlKey((HResource) null, "andxor.sv", 'v'); // cd (w, cl)
+// Elapsed time: 73 seconds
+selectCodeEditor("andxor.sv", 199, 297); // cd (w, cl)
+selectCodeEditor("andxor.sv", 31, 276); // cd (w, cl)
+// Elapsed time: 41 seconds
+selectCodeEditor("andxor.sv", 82, 405); // cd (w, cl)
+selectCodeEditor("andxor.sv", 284, 423); // cd (w, cl)
+selectCodeEditor("andxor.sv", 274, 439); // cd (w, cl)
+selectCodeEditor("andxor.sv", 274, 439, false, false, false, false, true); // cd (w, cl) - Double Click
+selectCodeEditor("andxor.sv", 272, 443); // cd (w, cl)
+selectCodeEditor("andxor.sv", 272, 447); // cd (w, cl)
+selectCodeEditor("andxor.sv", 160, 194); // cd (w, cl)
+selectCodeEditor("andxor.sv", 114, 490); // cd (w, cl)
+typeControlKey((HResource) null, "andxor.sv", 'v'); // cd (w, cl)
+// Elapsed time: 72 seconds
+selectCodeEditor("andxor.sv", 135, 454); // cd (w, cl)
+selectCodeEditor("andxor.sv", 134, 466); // cd (w, cl)
+selectCodeEditor("andxor.sv", 41, 475); // cd (w, cl)
+selectCodeEditor("andxor.sv", 31, 466); // cd (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("andxor.sv", 120, 71); // cd (w, cl)
+// Elapsed time: 19 seconds
+selectCodeEditor("andxor.sv", 60, 110); // cd (w, cl)
+// Elapsed time: 41 seconds
+selectCodeEditor("andxor.sv", 179, 388); // cd (w, cl)
+// Elapsed time: 109 seconds
+selectCodeEditor("andxor.sv", 167, 327); // cd (w, cl)
+selectCodeEditor("andxor.sv", 154, 303); // cd (w, cl)
+selectCodeEditor("andxor.sv", 348, 468); // cd (w, cl)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 709 MB. GUI used memory: 47 MB. Current time: 4/19/18 8:09:05 PM CDT
+// Elapsed time: 427 seconds
+selectCodeEditor("andxor.sv", 180, 277); // cd (w, cl)
+// Elapsed time: 17 seconds
+selectCodeEditor("andxor.sv", 205, 455); // cd (w, cl)
+selectCodeEditor("andxor.sv", 196, 307); // cd (w, cl)
+selectCodeEditor("andxor.sv", 56, 370, false, false, false, true, false); // cd (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+// Elapsed time: 12 seconds
+selectCodeEditor("andxor.sv", 190, 316); // cd (w, cl)
+selectCodeEditor("andxor.sv", 192, 314, false, false, false, false, true); // cd (w, cl) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("andxor.sv", 136, 278); // cd (w, cl)
+// Elapsed time: 37 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 247, 165); // cd (w, cl)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+// Elapsed time: 68 seconds
+selectCodeEditor("andxor.sv", 109, 134); // cd (w, cl)
+selectCodeEditor("andxor.sv", 118, 145); // cd (w, cl)
+selectCodeEditor("andxor.sv", 109, 177); // cd (w, cl)
+selectCodeEditor("andxor.sv", 127, 401); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 196, 106); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 124, 130); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 100, 131); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 115, 128); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 117, 128, false, false, false, false, true); // cd (w, cl) - Double Click
+selectCodeEditor("LDE_test-1.sv", 124, 129); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 129, 129); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 127, 132); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 209, 144); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 127, 145); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 90, 148); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 154, 158); // cd (w, cl)
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 122, 146); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 128, 131); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 198, 148); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+// Elapsed time: 15 seconds
+selectCodeEditor("LDE_test-1.sv", 220, 193); // cd (w, cl)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 40, 281); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 201, 156); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 183, 248); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 155, 244); // cd (w, cl)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectCodeEditor("LDE_test-1.sv", 171, 271); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 163, 246); // cd (w, cl)
+// Elapsed time: 22 seconds
+selectCodeEditor("LDE_test-1.sv", 80, 259); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 215, 295); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 43, 319); // cd (w, cl)
+// Elapsed time: 16 seconds
+selectCodeEditor("LDE_test-1.sv", 246, 333); // cd (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("LDE_test-1.sv", 102, 225); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 91, 208); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 90, 211, false, false, false, false, true); // cd (w, cl) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("LDE_test-1.sv", 102, 259); // cd (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("LDE_test-1.sv", 49, 276); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 162, 261); // cd (w, cl)
+selectCodeEditor("LDE_test-1.sv", 54, 304); // cd (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("LDE_test-1.sv", 65, 300); // cd (w, cl)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cl)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z (cl)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z (cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cl)
+selectCodeEditor("LDE_test-1.sv", 347, 51); // cd (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 110 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "andxor.sv", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LDE_test-1.sv", 2); // k (j, cl)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4); // B (D, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, andxor_test (LDE_test-1.sv)]", 5, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, andxor_test (LDE_test-1.sv)]", 5, true, false, false, false, true, false); // B (D, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cl)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cl)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac (ai, cl)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as (cl): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (as)
+dismissDialog("Remove Sources"); // as (cl)
+// Tcl Message: export_ip_user_files -of_objects  [get_files H:/Documents/LDE_test-1.sv] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset sim_1 H:/Documents/LDE_test-1.sv 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4); // B (D, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cl)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3, true, false, false, false, true, false); // B (D, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ac (ai, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (h, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("H:/Documents/andxorBENCH.sv");
+// Elapsed time: 52 seconds
+selectButton("FINISH", "Finish"); // JButton (h, c)
+// 'h' command handler elapsed time: 62 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse H:/Documents/andxorBENCH.sv 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cl)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, andxor_test (andxorBENCH.sv)]", 1, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, andxor_test (andxorBENCH.sv)]", 1, true, false, false, false, true, false); // B (D, cl) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac (ai, cl)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as (cl): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (as)
+dismissDialog("Remove Sources"); // as (cl)
+// Tcl Message: export_ip_user_files -of_objects  [get_files H:/Documents/andxorBENCH.sv] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  H:/Documents/andxorBENCH.sv 
+// TclEventType: DG_GRAPH_GENERATED

@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Apr 19 20:22:18 2018
+# Process ID: 14740
+# Current directory: H:/Documents/andor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18800 H:\Documents\andor\andor.xpr
+# Log file: H:/Documents/andor/vivado.log
+# Journal file: H:/Documents/andor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/Documents/andor/andor.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse H:/Documents/andxorBENCH.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse H:/Documents/LDE_test-2.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1

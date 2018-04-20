@@ -2,10 +2,10 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Fri Apr 13 13:31:08 2018
-# Process ID: 10672
+# Start of session at: Fri Apr 20 00:58:18 2018
+# Process ID: 9124
 # Current directory: H:/Documents/andor
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8336 H:\Documents\andor\andor.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5808 H:\Documents\andor\andor.xpr
 # Log file: H:/Documents/andor/vivado.log
 # Journal file: H:/Documents/andor\vivado.jou
 #-----------------------------------------------------------
@@ -13,22 +13,70 @@ start_gui
 open_project H:/Documents/andor/andor.xpr
 update_compile_order -fileset sources_1
 launch_simulation
-source andxor.tcl
+source andxorBENCH.tcl
 close_sim
 launch_simulation
-source andxor.tcl
+source andxorBENCH.tcl
 close_sim
 launch_simulation
-source andxor.tcl
+source andxorBENCH.tcl
 close_sim
 launch_simulation
-source andxor.tcl
+source andxorBENCH.tcl
 close_sim
 launch_simulation
-source andxor.tcl
-add_bp {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} 38
-remove_bps -file {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} -line 38
+source andxorBENCH.tcl
 close_sim
 launch_simulation
-source andxor.tcl
+source andxorBENCH.tcl
 close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+launch_simulation
+source andxorBENCH.tcl
+add_bp {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} 30
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+remove_bps -file {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} -line 30
+add_bp {H:/Documents/andor/andor.srcs/sources_1/imports/Documents/andxor.sv} 30
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+import_files

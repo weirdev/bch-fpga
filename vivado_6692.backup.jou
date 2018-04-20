@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Apr 19 23:42:03 2018
+# Process ID: 6692
+# Current directory: H:/Documents/andor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7000 H:\Documents\andor\andor.xpr
+# Log file: H:/Documents/andor/vivado.log
+# Journal file: H:/Documents/andor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/Documents/andor/andor.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+close_sim
+launch_simulation
+source andxorBENCH.tcl
+add_bp {H:/Documents/andxorBENCH.sv} 30
+remove_bps -file {H:/Documents/andxorBENCH.sv} -line 30
+add_bp {H:/Documents/andxorBENCH.sv} 30
+remove_bps -file {H:/Documents/andxorBENCH.sv} -line 30
+add_bp {H:/Documents/andxorBENCH.sv} 30
+remove_bps -file {H:/Documents/andxorBENCH.sv} -line 30
+add_bp {H:/Documents/andxorBENCH.sv} 30
+remove_bps -file {H:/Documents/andxorBENCH.sv} -line 30
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
