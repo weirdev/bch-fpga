@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  --include "C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
-"../../../../andor.srcs/sources_1/imports/Documents/andxor.sv" \
-"../../../../../andxorBENCH.sv" \
+"../../../../andor.srcs/sources_1/imports/Desktop/andxor.sv" \
+"../../../../andor.srcs/sim_1/new/andxor_test.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

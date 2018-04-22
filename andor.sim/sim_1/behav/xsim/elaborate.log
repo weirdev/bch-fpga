@@ -1,14 +1,15 @@
 Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxorBENCH_behav xil_defaultlib.andxorBENCH xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 1e846948ed554d52a168dfd1589fc4d8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot andxor_test_behav xil_defaultlib.andxor_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 8 for port SUMBIT [H:/Documents/andxorBENCH.sv:27]
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/Wesley/dev/CSASA/bch-fpga/andor.srcs/sim_1/new/andxor_test.sv:65]
 Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 65, File C:/Users/Wesley/dev/CSASA/bch-fpga/andor.srcs/sim_1/new/andxor_test.sv
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.andxor
-Compiling module xil_defaultlib.andxorBENCH
+Compiling module xil_defaultlib.andxor_test
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot andxorBENCH_behav
+Built simulation snapshot andxor_test_behav
